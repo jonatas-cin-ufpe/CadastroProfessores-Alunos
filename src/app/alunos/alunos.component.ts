@@ -8,7 +8,7 @@ import { CommonModule } from "@angular/common";
 })
 export class AlunosComponent implements OnInit {
 
-  titulo = 'Alunos';
+  public titulo = 'Alunos';
 
   public alunos = [
     { id: 1, nome :'Marta', sobrenome: 'Luiza', telefone: 3212255},
