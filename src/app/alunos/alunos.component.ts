@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from "@angular/common";
+import { Aluno } from '../models/aluno';
 
 @Component({
   selector: 'app-alunos',
@@ -10,7 +11,7 @@ export class AlunosComponent implements OnInit {
 
   public titulo = 'Alunos';
 
-  public alunoSelecionado: string;
+  public alunoSelecionado: Aluno;
 
   public alunos = [
     { id: 1, nome :'Marta', sobrenome: 'Luiza', telefone: 3212255},
@@ -24,12 +25,12 @@ export class AlunosComponent implements OnInit {
 
      voltar(){
 
-      this.alunoSelecionado = '';
+      this.alunoSelecionado = null;
 
      }
 
-     alunoSelect(aluno: any){
-        this.alunoSelecionado = aluno.nome;
+     alunoSelect(aluno: Aluno){
+        this.alunoSelecionado = aluno;
      }
 
 
